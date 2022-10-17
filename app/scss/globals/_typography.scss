@@ -10,17 +10,23 @@ h3 {
 
 h1 {
   //font will be at least 16px
-  font-size: clamp(1.75rem, 1rem + 2vw, 2.5rem);
+  // font-size: clamp(1.75rem, 1rem + 2vw, 2.5rem);
+  font-size: clamp(u.remConverter(28), u.remConverter(16), u.remConverter(40));
 }
 
 h2 {
   //font will be at least 16px
-  font-size: clamp(1.375rem, 0.875rem + 1.5vw, 2.25rem);
+  // font-size: clamp(1.375rem, 0.875rem + 1.5vw, 2.25rem);
+  font-size: clamp(
+    u.remConverter(22),
+    u.remConverter(14) + 1.5vw,
+    u.remConverter(36)
+  );
 }
 
 p {
   margin-top: 0;
-  font-size: 1rem;
+  font-size: u.remConverter(16);
 }
 
 a,

@@ -4,16 +4,16 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto;
-  gap: 40px;
+  gap: u.remConverter(40);
   font-size: 2rem;
   // max-width: 1000px;
   //  100% for mobile 1000px for bigger devices, 40px is additional padding for mobile 20px for each side
-  width: min(calc(100% - 40px), 1000px);
+  width: min(calc(100% - u.remConverter(40)), u.remConverter(1000));
   margin-inline: auto;
 
   &__main,
   &__sidebar {
-    padding: 40px;
+    padding: u.remConverter(40);
   }
 
   // was @media (min-width: 900px) {
