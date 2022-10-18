@@ -1,5 +1,10 @@
 @use "../util" as u;
 
+//placeholder
+%widget {
+  padding: u.remConverter(16);
+}
+
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -28,14 +33,31 @@
   }
 
   &__sidebar {
-    background-color: rgb(50, 50, 77);
-
     @include u.breakpoint-down(md) {
       text-align: center;
     }
 
     @include u.breakpoint-down(sm) {
       text-align: right;
+    }
+  }
+  &__widget {
+    //parent element selector
+    // $widget: &;
+    background-color: rgb(50, 50, 77);
+
+    &--red {
+      @extend %widget;
+      background-color: rgb(97, 32, 32);
+    }
+
+    &--green {
+      //now we dont have to write all class name, extend will take values from &_widget
+      //load a value of a variable in sass selector name
+      // @extend #{$widget};
+      // @extend .grid_widget;
+      @extend %widget;
+      background-color: rgb(17, 80, 17);
     }
   }
 }

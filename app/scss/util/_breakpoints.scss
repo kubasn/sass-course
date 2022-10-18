@@ -2,17 +2,18 @@
 // 700-900px for tablet devices
 //900-1440px small screens
 //>1440 big screens
+@use "functions" as f;
 
 $breakpoints-up: (
-  "md": 43.75em,
-  "lg": 56.25em,
-  "xl": 90em,
+  "md": f.emConverter(700),
+  "lg": f.emConverter(900),
+  "xl": f.emConverter(1440),
 );
 //small 699.98px, medium 889.98px, large  1439.98px
 $breakpoints-down: (
-  "sm": 43.7485em,
-  "md": 56.24875em,
-  "lg": 89.99875em,
+  "sm": f.emConverter(699.98),
+  "md": f.emConverter(889.98),
+  "lg": f.emConverter(1439.98),
 );
 
 //$size - we can specify what breakpoint we want to load(md,lg,xl)
