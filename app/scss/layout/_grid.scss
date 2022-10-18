@@ -1,9 +1,6 @@
 @use "../util" as u;
 
 //placeholder
-%widget {
-  padding: u.remConverter(16);
-}
 
 .grid {
   display: grid;
@@ -44,20 +41,18 @@
   &__widget {
     //parent element selector
     // $widget: &;
-    background-color: rgb(50, 50, 77);
+    padding: 16px;
 
-    &--red {
-      @extend %widget;
-      background-color: rgb(97, 32, 32);
-    }
+    // .red {
+    //   background-color: rgb(97, 32, 32);
+    // }
 
-    &--green {
-      //now we dont have to write all class name, extend will take values from &_widget
-      //load a value of a variable in sass selector name
-      // @extend #{$widget};
-      // @extend .grid_widget;
-      @extend %widget;
-      background-color: rgb(17, 80, 17);
-    }
+    // .green {
+    //   //now we dont have to write all class name, extend will take values from &_widget
+    //   //load a value of a variable in sass selector name
+    //   // @extend #{$widget};
+    //   // @extend .grid_widget;
+    //   background-color: rgb(17, 80, 17);
+    // }
   }
 }
